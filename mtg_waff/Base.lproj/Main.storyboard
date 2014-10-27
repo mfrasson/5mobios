@@ -110,8 +110,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="df4-KQ-0AN">
-                                <rect key="frame" x="67" y="234" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="moeda1" translatesAutoresizingMaskIntoConstraints="NO" id="df4-KQ-0AN">
+                                <rect key="frame" x="67" y="181" width="240" height="306"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.77146444520000002" green="0.45520179220000001" blue="0.20987923250000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -119,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Amd-7J-hK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="-636"/>
+            <point key="canvasLocation" x="827.5" y="-636.5"/>
         </scene>
         <!--Busca View Controller-->
         <scene sceneID="nPa-wB-B0T">
@@ -246,6 +246,7 @@
         <image name="MTG Green" width="128" height="128"/>
         <image name="MTG Red" width="128" height="128"/>
         <image name="MTG White" width="128" height="128"/>
+        <image name="moeda1" width="155" height="155"/>
         <image name="mtg_buscar" width="256" height="256"/>
     </resources>
 </document>
