@@ -10,7 +10,6 @@
 		AC03760E19FEF91900C6030E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03760D19FEF91900C6030E /* AppDelegate.swift */; };
 		AC03761019FEF91900C6030E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03760F19FEF91900C6030E /* ViewController.swift */; };
 		AC03761319FEF91900C6030E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC03761119FEF91900C6030E /* Main.storyboard */; };
-		AC03761519FEF91900C6030E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC03761419FEF91900C6030E /* Images.xcassets */; };
 		AC03761819FEF91900C6030E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC03761619FEF91900C6030E /* LaunchScreen.xib */; };
 		AC03762419FEF91900C6030E /* mtg_waffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03762319FEF91900C6030E /* mtg_waffTests.swift */; };
 		AC03762E19FEF9D500C6030E /* BuscaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03762D19FEF9D500C6030E /* BuscaViewController.swift */; };
@@ -34,7 +33,6 @@
 		AC03760D19FEF91900C6030E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC03760F19FEF91900C6030E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC03761219FEF91900C6030E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AC03761419FEF91900C6030E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AC03761719FEF91900C6030E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AC03761D19FEF91900C6030E /* mtg_waffTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mtg_waffTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC03762219FEF91900C6030E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 				AC03762F19FEFE9E00C6030E /* ListaResultadoViewController.swift */,
 				AC03763119FEFF1B00C6030E /* DetalheImagemViewController.swift */,
 				AC03761119FEF91900C6030E /* Main.storyboard */,
-				AC03761419FEF91900C6030E /* Images.xcassets */,
 				AC03761619FEF91900C6030E /* LaunchScreen.xib */,
 				AC03760B19FEF91900C6030E /* Supporting Files */,
 			);
@@ -203,7 +200,6 @@
 			files = (
 				AC03761319FEF91900C6030E /* Main.storyboard in Resources */,
 				AC03761819FEF91900C6030E /* LaunchScreen.xib in Resources */,
-				AC03761519FEF91900C6030E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +415,7 @@
 				AC03762919FEF91900C6030E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC03762A19FEF91900C6030E /* Build configuration list for PBXNativeTarget "mtg_waffTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +424,7 @@
 				AC03762C19FEF91900C6030E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
