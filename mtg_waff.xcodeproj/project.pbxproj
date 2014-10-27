@@ -14,6 +14,8 @@
 		AC03761819FEF91900C6030E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC03761619FEF91900C6030E /* LaunchScreen.xib */; };
 		AC03762419FEF91900C6030E /* mtg_waffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03762319FEF91900C6030E /* mtg_waffTests.swift */; };
 		AC03762E19FEF9D500C6030E /* BuscaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03762D19FEF9D500C6030E /* BuscaViewController.swift */; };
+		AC03763019FEFE9E00C6030E /* ListaResultadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03762F19FEFE9E00C6030E /* ListaResultadoViewController.swift */; };
+		AC03763219FEFF1B00C6030E /* DetalheImagemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03763119FEFF1B00C6030E /* DetalheImagemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		AC03762219FEF91900C6030E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC03762319FEF91900C6030E /* mtg_waffTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mtg_waffTests.swift; sourceTree = "<group>"; };
 		AC03762D19FEF9D500C6030E /* BuscaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuscaViewController.swift; sourceTree = "<group>"; };
+		AC03762F19FEFE9E00C6030E /* ListaResultadoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaResultadoViewController.swift; sourceTree = "<group>"; };
+		AC03763119FEFF1B00C6030E /* DetalheImagemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheImagemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +85,13 @@
 			children = (
 				AC03760D19FEF91900C6030E /* AppDelegate.swift */,
 				AC03760F19FEF91900C6030E /* ViewController.swift */,
+				AC03762D19FEF9D500C6030E /* BuscaViewController.swift */,
+				AC03762F19FEFE9E00C6030E /* ListaResultadoViewController.swift */,
+				AC03763119FEFF1B00C6030E /* DetalheImagemViewController.swift */,
 				AC03761119FEF91900C6030E /* Main.storyboard */,
 				AC03761419FEF91900C6030E /* Images.xcassets */,
 				AC03761619FEF91900C6030E /* LaunchScreen.xib */,
 				AC03760B19FEF91900C6030E /* Supporting Files */,
-				AC03762D19FEF9D500C6030E /* BuscaViewController.swift */,
 			);
 			path = mtg_waff;
 			sourceTree = "<group>";
@@ -215,6 +221,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC03763219FEFF1B00C6030E /* DetalheImagemViewController.swift in Sources */,
+				AC03763019FEFE9E00C6030E /* ListaResultadoViewController.swift in Sources */,
 				AC03761019FEF91900C6030E /* ViewController.swift in Sources */,
 				AC03760E19FEF91900C6030E /* AppDelegate.swift in Sources */,
 				AC03762E19FEF9D500C6030E /* BuscaViewController.swift in Sources */,
