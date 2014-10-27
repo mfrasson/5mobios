@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC03760E19FEF91900C6030E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03760D19FEF91900C6030E /* AppDelegate.swift */; };
+		AC03761019FEF91900C6030E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03760F19FEF91900C6030E /* ViewController.swift */; };
+		AC03761319FEF91900C6030E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC03761119FEF91900C6030E /* Main.storyboard */; };
+		AC03761519FEF91900C6030E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC03761419FEF91900C6030E /* Images.xcassets */; };
+		AC03761819FEF91900C6030E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC03761619FEF91900C6030E /* LaunchScreen.xib */; };
+		AC03762419FEF91900C6030E /* mtg_waffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03762319FEF91900C6030E /* mtg_waffTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC03761E19FEF91900C6030E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC03760019FEF91900C6030E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC03760719FEF91900C6030E;
+			remoteInfo = mtg_waff;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC03760819FEF91900C6030E /* mtg_waff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mtg_waff.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC03760C19FEF91900C6030E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC03760D19FEF91900C6030E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC03760F19FEF91900C6030E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC03761219FEF91900C6030E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC03761419FEF91900C6030E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AC03761719FEF91900C6030E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AC03761D19FEF91900C6030E /* mtg_waffTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mtg_waffTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC03762219FEF91900C6030E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC03762319FEF91900C6030E /* mtg_waffTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mtg_waffTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC03760519FEF91900C6030E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC03761A19FEF91900C6030E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC0375FF19FEF91900C6030E = {
+			isa = PBXGroup;
+			children = (
+				AC03760A19FEF91900C6030E /* mtg_waff */,
+				AC03762019FEF91900C6030E /* mtg_waffTests */,
+				AC03760919FEF91900C6030E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC03760919FEF91900C6030E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC03760819FEF91900C6030E /* mtg_waff.app */,
+				AC03761D19FEF91900C6030E /* mtg_waffTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC03760A19FEF91900C6030E /* mtg_waff */ = {
+			isa = PBXGroup;
+			children = (
+				AC03760D19FEF91900C6030E /* AppDelegate.swift */,
+				AC03760F19FEF91900C6030E /* ViewController.swift */,
+				AC03761119FEF91900C6030E /* Main.storyboard */,
+				AC03761419FEF91900C6030E /* Images.xcassets */,
+				AC03761619FEF91900C6030E /* LaunchScreen.xib */,
+				AC03760B19FEF91900C6030E /* Supporting Files */,
+			);
+			path = mtg_waff;
+			sourceTree = "<group>";
+		};
+		AC03760B19FEF91900C6030E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC03760C19FEF91900C6030E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC03762019FEF91900C6030E /* mtg_waffTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC03762319FEF91900C6030E /* mtg_waffTests.swift */,
+				AC03762119FEF91900C6030E /* Supporting Files */,
+			);
+			path = mtg_waffTests;
+			sourceTree = "<group>";
+		};
+		AC03762119FEF91900C6030E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC03762219FEF91900C6030E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC03760719FEF91900C6030E /* mtg_waff */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC03762719FEF91900C6030E /* Build configuration list for PBXNativeTarget "mtg_waff" */;
+			buildPhases = (
+				AC03760419FEF91900C6030E /* Sources */,
+				AC03760519FEF91900C6030E /* Frameworks */,
+				AC03760619FEF91900C6030E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mtg_waff;
+			productName = mtg_waff;
+			productReference = AC03760819FEF91900C6030E /* mtg_waff.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC03761C19FEF91900C6030E /* mtg_waffTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC03762A19FEF91900C6030E /* Build configuration list for PBXNativeTarget "mtg_waffTests" */;
+			buildPhases = (
+				AC03761919FEF91900C6030E /* Sources */,
+				AC03761A19FEF91900C6030E /* Frameworks */,
+				AC03761B19FEF91900C6030E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC03761F19FEF91900C6030E /* PBXTargetDependency */,
+			);
+			name = mtg_waffTests;
+			productName = mtg_waffTests;
+			productReference = AC03761D19FEF91900C6030E /* mtg_waffTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC03760019FEF91900C6030E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "WAFF Magic";
+				TargetAttributes = {
+					AC03760719FEF91900C6030E = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					AC03761C19FEF91900C6030E = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = AC03760719FEF91900C6030E;
+					};
+				};
+			};
+			buildConfigurationList = AC03760319FEF91900C6030E /* Build configuration list for PBXProject "mtg_waff" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC0375FF19FEF91900C6030E;
+			productRefGroup = AC03760919FEF91900C6030E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC03760719FEF91900C6030E /* mtg_waff */,
+				AC03761C19FEF91900C6030E /* mtg_waffTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC03760619FEF91900C6030E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC03761319FEF91900C6030E /* Main.storyboard in Resources */,
+				AC03761819FEF91900C6030E /* LaunchScreen.xib in Resources */,
+				AC03761519FEF91900C6030E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC03761B19FEF91900C6030E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC03760419FEF91900C6030E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC03761019FEF91900C6030E /* ViewController.swift in Sources */,
+				AC03760E19FEF91900C6030E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC03761919FEF91900C6030E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC03762419FEF91900C6030E /* mtg_waffTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC03761F19FEF91900C6030E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC03760719FEF91900C6030E /* mtg_waff */;
+			targetProxy = AC03761E19FEF91900C6030E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC03761119FEF91900C6030E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC03761219FEF91900C6030E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC03761619FEF91900C6030E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC03761719FEF91900C6030E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC03762519FEF91900C6030E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC03762619FEF91900C6030E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC03762819FEF91900C6030E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mtg_waff/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AC03762919FEF91900C6030E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mtg_waff/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AC03762B19FEF91900C6030E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = mtg_waffTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mtg_waff.app/mtg_waff";
+			};
+			name = Debug;
+		};
+		AC03762C19FEF91900C6030E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = mtg_waffTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mtg_waff.app/mtg_waff";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC03760319FEF91900C6030E /* Build configuration list for PBXProject "mtg_waff" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC03762519FEF91900C6030E /* Debug */,
+				AC03762619FEF91900C6030E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC03762719FEF91900C6030E /* Build configuration list for PBXNativeTarget "mtg_waff" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC03762819FEF91900C6030E /* Debug */,
+				AC03762919FEF91900C6030E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AC03762A19FEF91900C6030E /* Build configuration list for PBXNativeTarget "mtg_waffTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC03762B19FEF91900C6030E /* Debug */,
+				AC03762C19FEF91900C6030E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC03760019FEF91900C6030E /* Project object */;
+}
