@@ -109,6 +109,9 @@
                                 <state key="normal" title="Girar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="girarActionTap:" destination="KYw-2L-b9D" eventType="touchUpInside" id="Tar-zL-6Ho"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="moeda1" translatesAutoresizingMaskIntoConstraints="NO" id="df4-KQ-0AN">
                                 <rect key="frame" x="67" y="181" width="240" height="306"/>
@@ -116,6 +119,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.77146444520000002" green="0.45520179220000001" blue="0.20987923250000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="coinImageView" destination="df4-KQ-0AN" id="mky-62-0E7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Amd-7J-hK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

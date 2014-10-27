@@ -10,10 +10,20 @@ import UIKit
 
 class MoedaViewController: UIViewController {
 
+    @IBOutlet weak var coinImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Setup da moeda para animacao de giro
+        self.coinImageView.animationDuration = 0.5
+        self.coinImageView.animationRepeatCount = 0
+        var arrImages:[UIImage] = [UIImage]()
+        for (var i = 1; i <= 3; i++) {
+            let img:UIImage = UIImage(named: "moeda\(i)")
+            arrImages.append(img)
+        }
+        self.coinImageView.animationImages = arrImages
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +32,18 @@ class MoedaViewController: UIViewController {
     }
     
 
+    @IBAction func girarActionTap(sender: UIButton) {
+        let angle:CGFloat = 180 / 180.0 * CGFloat(M_PI)
+        UIView.animateWithDuration(0.4, animations: { () -> Void in
+            self.coinImageView.transform = CGAffineTransformMakeRotation(angle)
+            }) { (completed) -> Void in
+                UIView.animateWithDuration(0.4, animations: { () -> Void in
+                    self.sonicImageView.transform = CGAffineTransformMakeRotation(0)
+                })
+        }
+        
+    }
+    
     /*
     // MARK: - Navigation
 
