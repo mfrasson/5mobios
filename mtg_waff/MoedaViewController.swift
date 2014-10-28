@@ -38,7 +38,7 @@ class MoedaViewController: UIViewController {
             self.coinImageView.transform = CGAffineTransformMakeRotation(angle)
             }) { (completed) -> Void in
                 UIView.animateWithDuration(0.4, animations: { () -> Void in
-                    self.sonicImageView.transform = CGAffineTransformMakeRotation(0)
+                    self.coinImageView.transform = CGAffineTransformMakeRotation(0)
                 })
         }
         
