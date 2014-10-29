@@ -33,14 +33,26 @@ class MoedaViewController: UIViewController {
     
 
     @IBAction func girarActionTap(sender: UIButton) {
-        let angle:CGFloat = 180 / 180.0 * CGFloat(M_PI)
+        let originalPosition:CGPoint = self.coinImageView.center
         UIView.animateWithDuration(0.4, animations: { () -> Void in
-            self.coinImageView.transform = CGAffineTransformMakeRotation(angle)
+            self.coinImageView.center = CGPointMake(self.coinImageView.center.x, self.coinImageView.center.y-100)
+            self.coinImageView.startAnimating()
             }) { (completed) -> Void in
-                UIView.animateWithDuration(0.4, animations: { () -> Void in
-                    self.coinImageView.transform = CGAffineTransformMakeRotation(0)
+                UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    self.coinImageView.center = originalPosition
                 })
+            self.coinImageView.stopAnimating()
         }
+        
+        //let angle:CGFloat = 180 / 180.0 * CGFloat(M_PI)
+        //UIView.animateWithDuration(0.4, animations: { () -> Void in
+        //    self.coinImageView.transform = CGAffineTransformMakeRotation(angle)
+        //    self.coinImageView.startAnimating()
+        //    }) { (completed) -> Void in
+        //        UIView.animateWithDuration(0.4, animations: { () -> Void in
+        //            self.coinImageView.transform = CGAffineTransformMakeRotation(0)
+        //        })
+        //}
         
     }
     
