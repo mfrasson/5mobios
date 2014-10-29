@@ -9,7 +9,7 @@
 import UIKit
 
 class ListaResultadoViewController: UITableViewController, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
-   
+    
     var cartas:Array<Dictionary<String, AnyObject>>? = nil
     var data = NSMutableData()
     
@@ -20,7 +20,8 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
         
         trataEspacosNomePesquisa(nomePesquisa!)
         
-        let url:NSURL = NSURL(string: "http://api.mtgapi.com/v1/card/name/" + nomePesquisa!)
+        let url:NSURL = NSURL(string: "http://api.mtgdb.info/search/" + nomePesquisa! + "?start=0&limit=0")
+        
         
         let request:NSURLRequest = NSURLRequest(URL: url)
         
@@ -38,7 +39,6 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
         // Dispose of any resources that can be recreated.
     }
     
-    
     func trataEspacosNomePesquisa(texto: NSString){
         nomePesquisa = texto.stringByReplacingOccurrencesOfString(" ", withString: "%20")
     }
@@ -48,20 +48,17 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //let numberOfRowsInSection = fetchedResultController.fetchedObjects?.count
         return cartas!.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellID", forIndexPath: indexPath) as UITableViewCell
-        
         let carta:Dictionary<String, AnyObject> = cartas![indexPath.row]
-        
         cell.textLabel?.text = carta["name"]! as? String
-        cell.detailTextLabel?.text = carta["id"]! as? String
-        //cell.accessoryType = UITableViewCellAccessoryType.DetailButton        cell.textLabel?.text = task.nome
+        //        let detail:Int = carta["id"]! as Int
+        //        cell.detailTextLabel?.text = "\(detail)"
+        cell.detailTextLabel?.text = carta["cardSetId"]! as? String
         return cell
     }
     
-
 }
