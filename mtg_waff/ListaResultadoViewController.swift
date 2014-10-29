@@ -9,16 +9,19 @@
 import UIKit
 
 class ListaResultadoViewController: UITableViewController, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
+    
     var cartas:Array<Dictionary<String, AnyObject>>? = nil
     var data = NSMutableData()
     
-    var nomePesquisa:NSString = "Lotus"
+    var nomePesquisa:NSString?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TODO: Implementar a busca pelo nome informado na tela anterior...
-        let url:NSURL = NSURL(string: "http://api.mtgapi.com/v1/card/name/" + nomePesquisa)
+        trataEspacosNomePesquisa(nomePesquisa!)
+        
+        let url:NSURL = NSURL(string: "http://api.mtgdb.info/search/" + nomePesquisa! + "?start=0&limit=0")
+        
         
         let request:NSURLRequest = NSURLRequest(URL: url)
         
@@ -26,16 +29,10 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
         var error = NSErrorPointer()
         var response = AutoreleasingUnsafeMutablePointer<NSURLResponse?>()
         var data:NSData? = NSURLConnection.sendSynchronousRequest(request, returningResponse: response, error: error)
-        
-        //		//MARK: - JSON Steps
         var json = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.allZeros, error: nil) as Array<AnyObject>
         
         self.cartas = json as? Array<Dictionary<String, AnyObject>>
         
-        // TODO: Implementar a exibição do Resultado na TableView
-        println(self.cartas)
-        
-        // Do any additional setup after loading the view. denovo
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,32 +40,26 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
         // Dispose of any resources that can be recreated.
     }
     
-    
-    func temp(){
-        
+    func trataEspacosNomePesquisa(texto: NSString){
+        nomePesquisa = texto.stringByReplacingOccurrencesOfString(" ", withString: "%20")
     }
-    
-    // #pragma mark - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //let numberOfRowsInSection = fetchedResultController.fetchedObjects?.count
         return cartas!.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CellID", forIndexPath: indexPath) as UITableViewCell
-        
         let carta:Dictionary<String, AnyObject> = cartas![indexPath.row]
-        
         cell.textLabel?.text = carta["name"]! as? String
-        cell.detailTextLabel?.text = carta["id"]! as? String
-        //cell.accessoryType = UITableViewCellAccessoryType.DetailButton        cell.textLabel?.text = task.nome
+        //        let detail:Int = carta["id"]! as Int
+        //        cell.detailTextLabel?.text = "\(detail)"
+        cell.detailTextLabel?.text = carta["cardSetId"]! as? String
         return cell
     }
     
-
 }
