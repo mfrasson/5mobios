@@ -41,6 +41,7 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
     
     func trataEspacosNomePesquisa(texto: NSString){
         nomePesquisa = texto.stringByReplacingOccurrencesOfString(" ", withString: "%20")
+        //teste
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
