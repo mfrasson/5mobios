@@ -47,4 +47,28 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
     func temp(){
         
     }
+    
+    // #pragma mark - Table view data source
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //let numberOfRowsInSection = fetchedResultController.fetchedObjects?.count
+        return cartas!.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("CellID", forIndexPath: indexPath) as UITableViewCell
+        
+        let carta:Dictionary<String, AnyObject> = cartas![indexPath.row]
+        
+        cell.textLabel?.text = carta["name"]! as? String
+        cell.detailTextLabel?.text = carta["id"]! as? String
+        //cell.accessoryType = UITableViewCellAccessoryType.DetailButton        cell.textLabel?.text = task.nome
+        return cell
+    }
+    
+
 }
