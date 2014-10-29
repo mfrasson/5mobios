@@ -32,6 +32,7 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
         var json = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.allZeros, error: nil) as Array<AnyObject>
         
         self.cartas = json as? Array<Dictionary<String, AnyObject>>
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,7 +42,6 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
     
     func trataEspacosNomePesquisa(texto: NSString){
         nomePesquisa = texto.stringByReplacingOccurrencesOfString(" ", withString: "%20")
-        //teste
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
