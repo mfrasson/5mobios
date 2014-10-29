@@ -203,7 +203,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="lNU-zW-wRT" kind="presentation" identifier="toImageViewSegue" id="2nr-ut-h82"/>
+                                    <segue destination="lNU-zW-wRT" kind="presentation" identifier="toImageViewSegue" modalTransitionStyle="crossDissolve" id="2nr-ut-h82"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
