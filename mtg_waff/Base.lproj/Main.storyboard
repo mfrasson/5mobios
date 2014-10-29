@@ -104,17 +104,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udx-CL-hvm">
-                                <rect key="frame" x="164" y="617" width="46" height="30"/>
-                                <state key="normal" title="Girar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="girarActionTap:" destination="KYw-2L-b9D" eventType="touchUpInside" id="Tar-zL-6Ho"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="moeda1" translatesAutoresizingMaskIntoConstraints="NO" id="df4-KQ-0AN">
-                                <rect key="frame" x="106" y="401" width="163" height="208"/>
+                                <rect key="frame" x="106" y="439" width="163" height="208"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.77146444520000002" green="0.45520179220000001" blue="0.20987923250000001" alpha="1" colorSpace="calibratedRGB"/>
