@@ -18,7 +18,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCb-r9-GH2">
                                 <rect key="frame" x="152" y="158" width="70" height="70"/>
-                                <state key="normal" image="MTG White">
+                                <state key="normal" image="mtgwhite">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -27,19 +27,19 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvQ-Wl-u4o">
                                 <rect key="frame" x="41" y="235" width="70" height="70"/>
-                                <state key="normal" image="MTG Green">
+                                <state key="normal" image="mtggreen">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vr8-fr-8mh">
                                 <rect key="frame" x="93" y="356" width="70" height="70"/>
-                                <state key="normal" image="MTG Red">
+                                <state key="normal" image="mtgred">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ses-RQ-yfo">
                                 <rect key="frame" x="259" y="235" width="70" height="70"/>
-                                <state key="normal" title="XXX" image="MTG Blue">
+                                <state key="normal" image="mtgblue">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -72,7 +72,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFC-vh-Jy2">
                                 <rect key="frame" x="209" y="356" width="70" height="70"/>
-                                <state key="normal" image="MTG Black">
+                                <state key="normal" image="mtgblack">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -259,12 +259,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MTG Black" width="128" height="128"/>
-        <image name="MTG Blue" width="128" height="128"/>
-        <image name="MTG Green" width="128" height="128"/>
-        <image name="MTG Red" width="128" height="128"/>
-        <image name="MTG White" width="128" height="128"/>
         <image name="moeda1" width="155" height="155"/>
         <image name="mtg_buscar" width="256" height="256"/>
+        <image name="mtgblack" width="128" height="128"/>
+        <image name="mtgblue" width="128" height="128"/>
+        <image name="mtggreen" width="128" height="128"/>
+        <image name="mtgred" width="128" height="128"/>
+        <image name="mtgwhite" width="128" height="128"/>
     </resources>
 </document>
