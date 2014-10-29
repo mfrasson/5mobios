@@ -8,8 +8,10 @@
 
 import UIKit
 
-class BuscaViewController: UIViewController {
+class BuscaViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var nomePesquisaTextView: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,14 +25,17 @@ class BuscaViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if(segue.identifier == "toListSegue"){
+            let listaResultadoController:ListaResultadoViewController = segue.destinationViewController as ListaResultadoViewController
+            listaResultadoController.nomePesquisa = nomePesquisaTextView.text
+        }
     }
-    */
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        return true
+    }
 
 }
