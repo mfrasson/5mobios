@@ -14,6 +14,8 @@ class MoedaViewController: UIViewController {
     var touchCoin:Bool = false
     var flag:Bool = false
     
+    var animando: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,26 +62,27 @@ class MoedaViewController: UIViewController {
     
     override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
         let originalPosition:CGPoint = self.coinImageView.center
-        
-        UIView.animateWithDuration(1.0, animations: { () -> Void in
-            if(!self.flag){
-                self.flag = true
-                self.coinImageView.center = CGPointMake(self.coinImageView.center.x, self.coinImageView.center.y-375)
+
+        if(!self.animando){
+            self.animando = true;
+            UIView.animateWithDuration(1.0, animations: { () -> Void in
                 self.coinImageView.startAnimating()
-            }}) { (completed) -> Void in
-                UIView.animateWithDuration(0.7, animations: { () -> Void in
-                    self.coinImageView.center = originalPosition
-                    }) { (completed) -> Void in
-                        self.touchCoin = false
-                        self.coinImageView.stopAnimating()
-                        self.flag = false
-                }
-                if (arc4random_uniform(100) > 50) {
-                    self.coinImageView.image = UIImage(named: "moeda1")
-                } else {
-                    self.coinImageView.image = UIImage(named: "moeda3")
-                }
-        }
+                self.coinImageView.center = CGPointMake(self.coinImageView.center.x, self.coinImageView.center.y - 375)
+                }) { (completed) -> Void in
+                    if(completed){
+                        UIView.animateWithDuration(1.0, animations: { () -> Void in
+                            self.coinImageView.center = CGPointMake(self.coinImageView.center.x, self.coinImageView.center.y + 375)
+                            }) { (completed2) -> Void in
+                                self.coinImageView.stopAnimating()
+                                self.animando = false
+                                if (arc4random_uniform(100) > 50) {
+                                    self.coinImageView.image = UIImage(named: "moeda1")
+                                } else {
+                                    self.coinImageView.image = UIImage(named: "moeda3")
+                                }
+                        }
+                    }
+            }}
         
     }
     
