@@ -62,4 +62,10 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
         return cell
     }
     
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+//        if(segue.identifier == "toImageViewSegue"){
+//            let detalheImagemController:DetalheImagemViewController = segue.destinationViewController as DetalheImagemViewController
+//            detalheImagemController.idCarta = (sender as UITableViewCell).t
+//        }
+//    }
 }

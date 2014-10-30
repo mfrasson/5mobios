@@ -16,6 +16,7 @@
 		AC03763019FEFE9E00C6030E /* ListaResultadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03762F19FEFE9E00C6030E /* ListaResultadoViewController.swift */; };
 		AC03763219FEFF1B00C6030E /* DetalheImagemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03763119FEFF1B00C6030E /* DetalheImagemViewController.swift */; };
 		AC879FD219FF109B0003924B /* MoedaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC879FD119FF109B0003924B /* MoedaViewController.swift */; };
+		AC94F2811A01BCA4000BB634 /* CelulaCartaCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94F2801A01BCA4000BB634 /* CelulaCartaCustomTableViewCell.swift */; };
 		AC9EEAEB19FF177400E66265 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9EEAEA19FF177400E66265 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		AC03762F19FEFE9E00C6030E /* ListaResultadoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaResultadoViewController.swift; sourceTree = "<group>"; };
 		AC03763119FEFF1B00C6030E /* DetalheImagemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalheImagemViewController.swift; sourceTree = "<group>"; };
 		AC879FD119FF109B0003924B /* MoedaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoedaViewController.swift; sourceTree = "<group>"; };
+		AC94F2801A01BCA4000BB634 /* CelulaCartaCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CelulaCartaCustomTableViewCell.swift; path = ../CelulaCartaCustomTableViewCell.swift; sourceTree = "<group>"; };
 		AC9EEAEA19FF177400E66265 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 			children = (
 				AC03760D19FEF91900C6030E /* AppDelegate.swift */,
 				AC03760F19FEF91900C6030E /* ViewController.swift */,
+				AC94F2801A01BCA4000BB634 /* CelulaCartaCustomTableViewCell.swift */,
 				AC03762D19FEF9D500C6030E /* BuscaViewController.swift */,
 				AC03762F19FEFE9E00C6030E /* ListaResultadoViewController.swift */,
 				AC879FD119FF109B0003924B /* MoedaViewController.swift */,
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC03763219FEFF1B00C6030E /* DetalheImagemViewController.swift in Sources */,
+				AC94F2811A01BCA4000BB634 /* CelulaCartaCustomTableViewCell.swift in Sources */,
 				AC03763019FEFE9E00C6030E /* ListaResultadoViewController.swift in Sources */,
 				AC03761019FEF91900C6030E /* ViewController.swift in Sources */,
 				AC879FD219FF109B0003924B /* MoedaViewController.swift in Sources */,
