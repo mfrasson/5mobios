@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoedaViewController: UIViewController {
+class MoedaViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var coinImageView: UIImageView!
     var touchCoin:Bool = false
@@ -18,6 +18,17 @@ class MoedaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Configura o gesto de tap via codigo
+        var swipeGesture:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handlerSwipe:")
+        swipeGesture.delegate = self
+        swipeGesture.direction = UISwipeGestureRecognizerDirection.Up
+        
+        
+        
+        
+        self.coinImageView.addGestureRecognizer(swipeGesture)
+        
         
         // Setup da moeda para animacao de giro
         self.coinImageView.animationDuration = 0.2
@@ -30,11 +41,39 @@ class MoedaViewController: UIViewController {
         self.coinImageView.animationImages = arrImages
     }
     
+    //MARK: - Gesture recognizers handles
+    func handlerSwipe(recognizer:UISwipeGestureRecognizer) {
+        
+        let originalPosition:CGPoint = self.coinImageView.center
+        
+        if(!self.animando){
+            self.animando = true;
+            UIView.animateWithDuration(1.0, animations: { () -> Void in
+                self.coinImageView.startAnimating()
+                self.coinImageView.center = CGPointMake(self.coinImageView.center.x, self.coinImageView.center.y - 375)
+                }) { (completed) -> Void in
+                    if(completed){
+                        UIView.animateWithDuration(1.0, animations: { () -> Void in
+                            self.coinImageView.center = CGPointMake(self.coinImageView.center.x, self.coinImageView.center.y + 375)
+                            }) { (completed2) -> Void in
+                                self.coinImageView.stopAnimating()
+                                self.animando = false
+                                if (arc4random_uniform(100) > 50) {
+                                    self.coinImageView.image = UIImage(named: "moeda1")
+                                } else {
+                                    self.coinImageView.image = UIImage(named: "moeda3")
+                                }
+                        }
+                    }
+            }}
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    /*
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         // Recupera um toque qualquer na tela
         let touch:UITouch = touches.anyObject() as UITouch
@@ -89,6 +128,7 @@ class MoedaViewController: UIViewController {
     override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
         self.touchCoin = false
     }
+    */
     
     /*
     // MARK: - Navigation
