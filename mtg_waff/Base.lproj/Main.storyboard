@@ -307,6 +307,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imagem" destination="fKf-Mb-PJ5" id="7ny-kd-FE2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTC-iW-Xi4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

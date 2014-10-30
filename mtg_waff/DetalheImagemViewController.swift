@@ -20,24 +20,24 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
         super.viewDidLoad()
         
         // TODO: Implementar a busca pelo id da carta selecionada na tela anterior...
-        let urlDetalhe:NSURL = NSURL(string: "http://api.mtgapi.com/v1/card/id/" + idCarta)
+//        let urlDetalhe:NSURL = NSURL(string: "http://api.mtgapi.com/v1/card/id/" + idCarta)
         
-        let requestDetalhe:NSURLRequest = NSURLRequest(URL: urlDetalhe)
+//        let requestDetalhe:NSURLRequest = NSURLRequest(URL: urlDetalhe)
         
         // Invoca a requisicao de forma sincrona
-        var errorDetalhe = NSErrorPointer()
-        var responseDetalhe = AutoreleasingUnsafeMutablePointer<NSURLResponse?>()
-        var dataDetalhe:NSData? = NSURLConnection.sendSynchronousRequest(requestDetalhe, returningResponse: responseDetalhe, error: errorDetalhe)
+//        var errorDetalhe = NSErrorPointer()
+//        var responseDetalhe = AutoreleasingUnsafeMutablePointer<NSURLResponse?>()
+//        var dataDetalhe:NSData? = NSURLConnection.sendSynchronousRequest(requestDetalhe, returningResponse: responseDetalhe, error: errorDetalhe)
         
         //		//MARK: - JSON Steps
-        var json = NSJSONSerialization.JSONObjectWithData(dataDetalhe!, options: NSJSONReadingOptions.allZeros, error: nil) as Array<AnyObject>
+//        var json = NSJSONSerialization.JSONObjectWithData(dataDetalhe!, options: NSJSONReadingOptions.allZeros, error: nil) as Array<AnyObject>
         
-        self.arrCarta = json as? Array<Dictionary<String, AnyObject>>
+//        self.arrCarta = json as? Array<Dictionary<String, AnyObject>>
         
         // TODO: Implementar a exibição do Resultado na TableView
-        println(arrCarta?[0]["image"])
+        //println(arrCarta?[0]["image"])
         
-        var cartaDic = arrCarta?[0]
+//        var cartaDic = arrCarta?[0]
         
         //self.enderecoImagem = cartaDic!["image"]! as String
         self.enderecoImagem = "http://api.mtgdb.info/content/hi_res_card_images/" + idCarta + ".jpg"
