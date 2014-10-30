@@ -10,17 +10,13 @@ import UIKit
 
 class CelulaCartaCustomTableViewCell: UITableViewCell {
     
-    private var mainText:UILabel = UILabel(frame: CGRect(x: 5, y: 5, width: 190, height: 90))
+    
+    @IBOutlet weak var nomeCarta: UILabel!
+    
+    @IBOutlet weak var colecaoCarta: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        let botao:UIButton = UIButton.buttonWithType(UIButtonType.InfoDark) as UIButton
-        botao.center = CGPointMake(280, 50)
-        self.contentView.addSubview(botao)
-        
-        mainText.backgroundColor = UIColor.clearColor()
-        mainText.text = ""
-        self.contentView.addSubview(mainText)
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
@@ -29,7 +25,8 @@ class CelulaCartaCustomTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setupCustomCell(aDict:Dictionary<String, String>) {
-        self.mainText.text = aDict["nome"]
+    func setupCustomCell(carta:Dictionary<String, AnyObject>) {
+        self.nomeCarta.text = carta["name"]! as? String
+        self.colecaoCarta.text = carta["cardSetId"]! as? String
     }
 }
