@@ -51,6 +51,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFC-vh-Jy2">
+                                <rect key="frame" x="324" y="349" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="2xW-5y-lwK"/>
+                                    <constraint firstAttribute="height" constant="70" id="eyr-EO-wrc"/>
+                                </constraints>
+                                <state key="normal" image="mtgblack">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DWU-LE-dMx" kind="show" identifier="ToDadoSegue" id="iDl-A2-NG1"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moeda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx0-R0-pHT">
                                 <rect key="frame" x="382" y="306" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -76,6 +89,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wishlist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh5-WX-M5Y">
+                                <rect key="frame" x="161" y="306" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vr8-fr-8mh">
                                 <rect key="frame" x="208" y="349" width="70" height="70"/>
                                 <constraints>
@@ -85,24 +104,8 @@
                                 <state key="normal" image="mtgred">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wishlist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh5-WX-M5Y">
-                                <rect key="frame" x="161" y="306" width="60" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFC-vh-Jy2">
-                                <rect key="frame" x="324" y="349" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="2xW-5y-lwK"/>
-                                    <constraint firstAttribute="height" constant="70" id="eyr-EO-wrc"/>
-                                </constraints>
-                                <state key="normal" image="mtgblack">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <connections>
-                                    <segue destination="DWU-LE-dMx" kind="show" identifier="ToDadoSegue" id="iDl-A2-NG1"/>
+                                    <segue destination="7B3-x0-dHv" kind="show" identifier="ToInfoViewControler" id="VgC-oR-JJ0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -251,6 +254,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EWH-3a-yiQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1133" y="119"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="4Ap-25-UKv">
+            <objects>
+                <viewController id="7B3-x0-dHv" customClass="InfoViewController" customModule="mtg_waff" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="svS-qu-GO6"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Ng-cT-Jjf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q2k-DS-Vro">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W6C-CL-Zfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="862"/>
         </scene>
         <!--Dado View Controller-->
         <scene sceneID="YWX-Bt-CAP">

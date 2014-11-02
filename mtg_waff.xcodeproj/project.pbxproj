@@ -19,6 +19,7 @@
 		AC94F2811A01BCA4000BB634 /* CelulaCartaCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94F2801A01BCA4000BB634 /* CelulaCartaCustomTableViewCell.swift */; };
 		AC9EEAEB19FF177400E66265 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9EEAEA19FF177400E66265 /* Images.xcassets */; };
 		B9316E5A1A06E52A0047E56D /* DadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9316E591A06E52A0047E56D /* DadoViewController.swift */; };
+		B9316E5C1A06F0840047E56D /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9316E5B1A06F0840047E56D /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		AC94F2801A01BCA4000BB634 /* CelulaCartaCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CelulaCartaCustomTableViewCell.swift; path = ../CelulaCartaCustomTableViewCell.swift; sourceTree = "<group>"; };
 		AC9EEAEA19FF177400E66265 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B9316E591A06E52A0047E56D /* DadoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DadoViewController.swift; sourceTree = "<group>"; };
+		B9316E5B1A06F0840047E56D /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				B9316E591A06E52A0047E56D /* DadoViewController.swift */,
 				AC03762F19FEFE9E00C6030E /* ListaResultadoViewController.swift */,
 				AC879FD119FF109B0003924B /* MoedaViewController.swift */,
+				B9316E5B1A06F0840047E56D /* InfoViewController.swift */,
 				AC03763119FEFF1B00C6030E /* DetalheImagemViewController.swift */,
 				AC03761119FEF91900C6030E /* Main.storyboard */,
 				AC03761619FEF91900C6030E /* LaunchScreen.xib */,
@@ -234,6 +237,7 @@
 				AC94F2811A01BCA4000BB634 /* CelulaCartaCustomTableViewCell.swift in Sources */,
 				B9316E5A1A06E52A0047E56D /* DadoViewController.swift in Sources */,
 				AC03763019FEFE9E00C6030E /* ListaResultadoViewController.swift in Sources */,
+				B9316E5C1A06F0840047E56D /* InfoViewController.swift in Sources */,
 				AC03761019FEF91900C6030E /* ViewController.swift in Sources */,
 				AC879FD219FF109B0003924B /* MoedaViewController.swift in Sources */,
 				AC03760E19FEF91900C6030E /* AppDelegate.swift in Sources */,
