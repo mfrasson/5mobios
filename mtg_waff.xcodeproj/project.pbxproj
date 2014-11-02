@@ -18,6 +18,7 @@
 		AC879FD219FF109B0003924B /* MoedaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC879FD119FF109B0003924B /* MoedaViewController.swift */; };
 		AC94F2811A01BCA4000BB634 /* CelulaCartaCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94F2801A01BCA4000BB634 /* CelulaCartaCustomTableViewCell.swift */; };
 		AC9EEAEB19FF177400E66265 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9EEAEA19FF177400E66265 /* Images.xcassets */; };
+		B9316E5A1A06E52A0047E56D /* DadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9316E591A06E52A0047E56D /* DadoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		AC879FD119FF109B0003924B /* MoedaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoedaViewController.swift; sourceTree = "<group>"; };
 		AC94F2801A01BCA4000BB634 /* CelulaCartaCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CelulaCartaCustomTableViewCell.swift; path = ../CelulaCartaCustomTableViewCell.swift; sourceTree = "<group>"; };
 		AC9EEAEA19FF177400E66265 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B9316E591A06E52A0047E56D /* DadoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DadoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				AC03760F19FEF91900C6030E /* ViewController.swift */,
 				AC94F2801A01BCA4000BB634 /* CelulaCartaCustomTableViewCell.swift */,
 				AC03762D19FEF9D500C6030E /* BuscaViewController.swift */,
+				B9316E591A06E52A0047E56D /* DadoViewController.swift */,
 				AC03762F19FEFE9E00C6030E /* ListaResultadoViewController.swift */,
 				AC879FD119FF109B0003924B /* MoedaViewController.swift */,
 				AC03763119FEFF1B00C6030E /* DetalheImagemViewController.swift */,
@@ -229,6 +232,7 @@
 			files = (
 				AC03763219FEFF1B00C6030E /* DetalheImagemViewController.swift in Sources */,
 				AC94F2811A01BCA4000BB634 /* CelulaCartaCustomTableViewCell.swift in Sources */,
+				B9316E5A1A06E52A0047E56D /* DadoViewController.swift in Sources */,
 				AC03763019FEFE9E00C6030E /* ListaResultadoViewController.swift in Sources */,
 				AC03761019FEF91900C6030E /* ViewController.swift in Sources */,
 				AC879FD219FF109B0003924B /* MoedaViewController.swift in Sources */,

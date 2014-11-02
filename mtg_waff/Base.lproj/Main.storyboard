@@ -51,16 +51,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFC-vh-Jy2">
-                                <rect key="frame" x="324" y="349" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="2xW-5y-lwK"/>
-                                    <constraint firstAttribute="height" constant="70" id="eyr-EO-wrc"/>
-                                </constraints>
-                                <state key="normal" image="mtgblack">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moeda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx0-R0-pHT">
                                 <rect key="frame" x="382" y="306" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -102,6 +92,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFC-vh-Jy2">
+                                <rect key="frame" x="324" y="349" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="2xW-5y-lwK"/>
+                                    <constraint firstAttribute="height" constant="70" id="eyr-EO-wrc"/>
+                                </constraints>
+                                <state key="normal" image="mtgblack">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DWU-LE-dMx" kind="show" identifier="ToDadoSegue" id="iDl-A2-NG1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.77146444520000002" green="0.45520179220000001" blue="0.20987923250000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -229,7 +232,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.77146444520000002" green="0.45520179220000001" blue="0.20987923250000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="pVn-xh-lIk" secondAttribute="centerX" constant="-0.5" id="3uq-Sm-DrO"/>
                             <constraint firstItem="pVn-xh-lIk" firstAttribute="top" secondItem="K51-0p-sfb" secondAttribute="bottom" constant="8" id="5kx-Rf-jvg"/>
@@ -248,6 +251,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EWH-3a-yiQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1133" y="119"/>
+        </scene>
+        <!--Dado View Controller-->
+        <scene sceneID="YWX-Bt-CAP">
+            <objects>
+                <viewController id="DWU-LE-dMx" customClass="DadoViewController" customModule="mtg_waff" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gbb-O4-K9W"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Rx-CV-53W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hbg-bs-iKl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="c7O-rh-ycg">
+                                <rect key="frame" x="176" y="172" width="249" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="7cA-BN-M6Q"/>
+                                    <constraint firstAttribute="width" constant="249" id="czf-ha-1xs"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="c7O-rh-ycg" secondAttribute="centerY" id="32E-Pg-oTR"/>
+                            <constraint firstAttribute="centerX" secondItem="c7O-rh-ycg" secondAttribute="centerX" constant="-0.5" id="XOb-TO-krV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MVf-f8-oRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1133" y="862"/>
         </scene>
         <!--Lista Resultado View Controller-->
         <scene sceneID="TeO-cj-vbY">
@@ -332,6 +366,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dice1" width="2400" height="2400"/>
         <image name="moeda1" width="155" height="155"/>
         <image name="mtg_buscar" width="256" height="256"/>
         <image name="mtgblack" width="128" height="128"/>
