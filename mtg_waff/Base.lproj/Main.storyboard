@@ -278,6 +278,9 @@
                             <constraint firstAttribute="centerX" secondItem="c7O-rh-ycg" secondAttribute="centerX" constant="-0.5" id="XOb-TO-krV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dadoImageView" destination="c7O-rh-ycg" id="fxR-xF-yH7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVf-f8-oRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
