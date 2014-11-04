@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mwB-Th-Gan">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--MTG-->
@@ -266,7 +267,29 @@
                     <view key="view" contentMode="scaleToFill" id="q2k-DS-Vro">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COLOCAR LOGO DO GRUPO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScR-JU-NW2">
+                                <rect key="frame" x="166" y="109" width="232" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0B-ZK-GCd">
+                                <rect key="frame" x="20" y="199" width="564" height="351"/>
+                                <mutableString key="text">Projeto iOS - MTG WAFF  Integrantes: - Caio Waquil - Mauricio Frasson - Newton Arruda - Ronaldo Faraone  Projeto: App desenvolvido para os fãs de Magic The Gathering.  &gt; Permite você buscar cartas de todas as edições lançadas.  &gt; Pode usar moeda &gt; Pode usar o dado &gt; Adicionar suas cartas a uma lista de favoritos</mutableString>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="0.7725490196" green="0.4549019608" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="a0B-ZK-GCd" secondAttribute="trailing" constant="16" id="13R-oS-tWK"/>
+                            <constraint firstItem="ScR-JU-NW2" firstAttribute="top" secondItem="svS-qu-GO6" secondAttribute="bottom" constant="45" id="4tJ-8h-Qdr"/>
+                            <constraint firstItem="5Ng-cT-Jjf" firstAttribute="top" secondItem="a0B-ZK-GCd" secondAttribute="bottom" constant="50" id="G29-Z3-Bi8"/>
+                            <constraint firstItem="a0B-ZK-GCd" firstAttribute="leading" secondItem="q2k-DS-Vro" secondAttribute="leading" constant="20" id="MRS-rU-uBl"/>
+                            <constraint firstItem="ScR-JU-NW2" firstAttribute="centerY" secondItem="a0B-ZK-GCd" secondAttribute="centerY" constant="-255" id="XYg-Dm-XFI"/>
+                            <constraint firstItem="ScR-JU-NW2" firstAttribute="leading" secondItem="q2k-DS-Vro" secondAttribute="leadingMargin" constant="150" id="qdE-je-XwG"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6C-CL-Zfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
