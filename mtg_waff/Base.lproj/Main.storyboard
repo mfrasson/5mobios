@@ -276,7 +276,6 @@
         <!--Dado View Controller-->
         <scene sceneID="YWX-Bt-CAP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MVf-f8-oRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="DWU-LE-dMx" customClass="DadoViewController" customModule="mtg_waff" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gbb-O4-K9W"/>
@@ -304,6 +303,7 @@
                         <outlet property="diceImageView" destination="c7O-rh-ycg" id="qdm-Hi-xtW"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MVf-f8-oRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1133" y="862"/>
         </scene>
