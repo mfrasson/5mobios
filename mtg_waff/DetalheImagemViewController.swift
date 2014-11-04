@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
+class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NSURLConnectionDataDelegate, NSFetchedResultsControllerDelegate {
     var arrCarta:Array<Dictionary<String, AnyObject>>? = nil
     
     @IBOutlet var imagem: UIImageView!
@@ -16,35 +17,13 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
     var idCarta:NSString = "3"
     var enderecoImagem:NSString = ""
     
+    var managedObjectContext: NSManagedObjectContext?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // TODO: Implementar a busca pelo id da carta selecionada na tela anterior...
-//        let urlDetalhe:NSURL = NSURL(string: "http://api.mtgapi.com/v1/card/id/" + idCarta)
-        
-//        let requestDetalhe:NSURLRequest = NSURLRequest(URL: urlDetalhe)
-        
-        // Invoca a requisicao de forma sincrona
-//        var errorDetalhe = NSErrorPointer()
-//        var responseDetalhe = AutoreleasingUnsafeMutablePointer<NSURLResponse?>()
-//        var dataDetalhe:NSData? = NSURLConnection.sendSynchronousRequest(requestDetalhe, returningResponse: responseDetalhe, error: errorDetalhe)
-        
-        //		//MARK: - JSON Steps
-//        var json = NSJSONSerialization.JSONObjectWithData(dataDetalhe!, options: NSJSONReadingOptions.allZeros, error: nil) as Array<AnyObject>
-        
-//        self.arrCarta = json as? Array<Dictionary<String, AnyObject>>
-        
-        // TODO: Implementar a exibição do Resultado na TableView
-        //println(arrCarta?[0]["image"])
-        
-//        var cartaDic = arrCarta?[0]
-        
-        //self.enderecoImagem = cartaDic!["image"]! as String
         self.enderecoImagem = "http://api.mtgdb.info/content/hi_res_card_images/" + idCarta + ".jpg"
 
-        // Do any additional setup after loading the view.
-        //imagem = UIImage(data: NSData)
-        
         let urlImagem:NSURL = NSURL(string: enderecoImagem)
         
         let requestImagem:NSURLRequest = NSURLRequest(URL: urlImagem)
@@ -55,6 +34,10 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
 
         
         imagem.image = UIImage(data: dataImagem!)
+        
+        self.setupCoreDataStack()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,7 +45,49 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
         // Dispose of any resources that can be recreated.
     }
     
+    func setupCoreDataStack(){
+        // Criação do Modelo
+        let modelURL:NSURL? = NSBundle.mainBundle().URLForResource("FavListModel", withExtension: "momd")
+        let model = NSManagedObjectModel(contentsOfURL: modelURL!)
 
+        // Criação do Coordenador
+        var coordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
+        
+        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        let applicationDocumentsDirectory = urls[0] as NSURL
+        
+        let url = applicationDocumentsDirectory.URLByAppendingPathComponent("FavListModel.sqlite")
+        var error: NSError? = nil
+        
+        var store = coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error)
+        
+        if store == nil {
+            NSLog("Unresolved error \(error), \(error!.userInfo)")
+            return
+        }
+        
+        // Criação do contexto
+        managedObjectContext = NSManagedObjectContext()
+        managedObjectContext!.persistentStoreCoordinator = coordinator
+       
+    }
+    
+    func addCardToFavList(){
+        let entityDescripition = NSEntityDescription.entityForName("Card", inManagedObjectContext: managedObjectContext!)
+        let card = Card(entity: entityDescripition!, insertIntoManagedObjectContext: managedObjectContext)
+//        card.id = idCarta
+//        card.nome = nomeCarta
+//        card.edicao = edicaoCarta
+        card.imgpath = enderecoImagem
+        managedObjectContext?.save(nil)
+
+    }
+    
+    func delCardFromFavList(carta:Card){
+        managedObjectContext?.deleteObject(carta)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
