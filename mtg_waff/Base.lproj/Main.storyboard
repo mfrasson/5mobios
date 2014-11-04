@@ -276,6 +276,7 @@
         <!--Dado View Controller-->
         <scene sceneID="YWX-Bt-CAP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MVf-f8-oRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="DWU-LE-dMx" customClass="DadoViewController" customModule="mtg_waff" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gbb-O4-K9W"/>
@@ -285,8 +286,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="c7O-rh-ycg">
-                                <rect key="frame" x="176" y="172" width="249" height="256"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="c7O-rh-ycg">
+                                <rect key="frame" x="176" y="324" width="249" height="256"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="256" id="7cA-BN-M6Q"/>
                                     <constraint firstAttribute="width" constant="249" id="czf-ha-1xs"/>
@@ -295,15 +296,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.7725490196" green="0.4549019608" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="c7O-rh-ycg" secondAttribute="centerY" id="32E-Pg-oTR"/>
                             <constraint firstAttribute="centerX" secondItem="c7O-rh-ycg" secondAttribute="centerX" constant="-0.5" id="XOb-TO-krV"/>
+                            <constraint firstItem="4Rx-CV-53W" firstAttribute="top" secondItem="c7O-rh-ycg" secondAttribute="bottom" constant="20" id="ls9-Po-dKf"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dadoImageView" destination="c7O-rh-ycg" id="fxR-xF-yH7"/>
+                        <outlet property="diceImageView" destination="c7O-rh-ycg" id="qdm-Hi-xtW"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MVf-f8-oRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1133" y="862"/>
         </scene>
