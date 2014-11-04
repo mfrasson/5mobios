@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mwB-Th-Gan">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mwB-Th-Gan">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -235,7 +235,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.77254901960784317" green="0.45490196078431372" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="pVn-xh-lIk" secondAttribute="centerX" constant="-0.5" id="3uq-Sm-DrO"/>
                             <constraint firstItem="pVn-xh-lIk" firstAttribute="top" secondItem="K51-0p-sfb" secondAttribute="bottom" constant="8" id="5kx-Rf-jvg"/>
@@ -266,7 +266,7 @@
                     <view key="view" contentMode="scaleToFill" id="q2k-DS-Vro">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.7725490196" green="0.4549019608" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6C-CL-Zfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -276,6 +276,7 @@
         <!--Dado View Controller-->
         <scene sceneID="YWX-Bt-CAP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MVf-f8-oRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="DWU-LE-dMx" customClass="DadoViewController" customModule="mtg_waff" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gbb-O4-K9W"/>
@@ -285,25 +286,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="c7O-rh-ycg">
-                                <rect key="frame" x="176" y="172" width="249" height="256"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="c7O-rh-ycg">
+                                <rect key="frame" x="176" y="324" width="249" height="256"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="256" id="7cA-BN-M6Q"/>
                                     <constraint firstAttribute="width" constant="249" id="czf-ha-1xs"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.7725490196" green="0.4549019608" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="c7O-rh-ycg" secondAttribute="centerY" id="32E-Pg-oTR"/>
                             <constraint firstAttribute="centerX" secondItem="c7O-rh-ycg" secondAttribute="centerX" constant="-0.5" id="XOb-TO-krV"/>
+                            <constraint firstItem="4Rx-CV-53W" firstAttribute="top" secondItem="c7O-rh-ycg" secondAttribute="bottom" constant="20" id="ls9-Po-dKf"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dadoImageView" destination="c7O-rh-ycg" id="fxR-xF-yH7"/>
+                        <outlet property="diceImageView" destination="c7O-rh-ycg" id="qdm-Hi-xtW"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MVf-f8-oRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1133" y="862"/>
         </scene>
