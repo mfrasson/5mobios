@@ -21,8 +21,7 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
         trataEspacosNomePesquisa(nomePesquisa!)
         
         let url:NSURL = NSURL(string: "http://api.mtgdb.info/search/" + nomePesquisa! + "?start=0&limit=0")
-        
-        
+
         let request:NSURLRequest = NSURLRequest(URL: url)
         
         // Invoca a requisicao de forma sincrona
@@ -65,10 +64,10 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
         return cell
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-//        if(segue.identifier == "toImageViewSegue"){
-//            let detalheImagemController:DetalheImagemViewController = segue.destinationViewController as DetalheImagemViewController
-//            detalheImagemController.idCarta = (sender as UITableViewCell).t
-//        }
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if(segue.identifier == "toImageViewSegue"){
+            let detalheImagemController:DetalheImagemViewController = segue.destinationViewController as DetalheImagemViewController
+            detalheImagemController.celulaCarta = sender as CelulaCartaCustomTableViewCell
+        }
+    }
 }

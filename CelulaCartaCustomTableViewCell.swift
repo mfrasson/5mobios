@@ -15,6 +15,8 @@ class CelulaCartaCustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var colecaoCarta: UILabel!
     
+    var idCarta: Int!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -28,5 +30,7 @@ class CelulaCartaCustomTableViewCell: UITableViewCell {
     func setupCustomCell(carta:Dictionary<String, AnyObject>) {
         self.nomeCarta.text = carta["name"]! as? String
         self.colecaoCarta.text = carta["cardSetId"]! as? String
+        let id:Int = carta["id"]! as Int
+        self.idCarta = id
     }
 }

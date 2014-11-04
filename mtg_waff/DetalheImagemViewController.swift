@@ -13,6 +13,8 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
     
     @IBOutlet var imagem: UIImageView!
     
+    var celulaCarta: CelulaCartaCustomTableViewCell!
+    
     var idCarta:NSString = "3"
     var enderecoImagem:NSString = ""
     
