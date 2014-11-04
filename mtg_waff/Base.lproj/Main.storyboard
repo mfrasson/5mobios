@@ -337,7 +337,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="colecaoCarta" destination="ZDn-NN-Zv6" id="Dmm-z8-GB8"/>
+                                    <outlet property="edicaoCarta" destination="ZDn-NN-Zv6" id="dZU-8A-MJB"/>
                                     <outlet property="nomeCarta" destination="cOQ-7P-TgV" id="0vH-mP-Jg3"/>
                                     <segue destination="lNU-zW-wRT" kind="presentation" identifier="toImageViewSegue" modalTransitionStyle="crossDissolve" id="2nr-ut-h82"/>
                                 </connections>

@@ -10,12 +10,11 @@ import UIKit
 
 class CelulaCartaCustomTableViewCell: UITableViewCell {
     
-    
     @IBOutlet weak var nomeCarta: UILabel!
     
-    @IBOutlet weak var colecaoCarta: UILabel!
+    @IBOutlet weak var edicaoCarta: UILabel!
     
-    var idCarta: Int!
+    var idCarta: Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,13 +22,11 @@ class CelulaCartaCustomTableViewCell: UITableViewCell {
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     func setupCustomCell(carta:Dictionary<String, AnyObject>) {
         self.nomeCarta.text = carta["name"]! as? String
-        self.colecaoCarta.text = carta["cardSetId"]! as? String
+        self.edicaoCarta.text = carta["cardSetId"]! as? String
         let id:Int = carta["id"]! as Int
         self.idCarta = id
     }
