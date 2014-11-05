@@ -30,4 +30,12 @@ class CelulaCartaCustomTableViewCell: UITableViewCell {
         let id:Int = carta["id"]! as Int
         self.idCarta = id
     }
+    
+    func setupCustomCell(carta:Card) {
+        self.nomeCarta.text = carta.nome
+        self.edicaoCarta.text = carta.edicao
+        let id:Int = carta.id
+        self.idCarta = id
+    }
+
 }

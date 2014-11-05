@@ -48,9 +48,10 @@ class ListaDesejoViewControllerTableViewController: UITableViewController, NSFet
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("CellID", forIndexPath: indexPath) as UITableViewCell
-        let task = fetchedResultController.objectAtIndexPath(indexPath) as Card
-        cell.textLabel?.text = task.nome
+        var cell = tableView.dequeueReusableCellWithIdentifier("CellID", forIndexPath: indexPath) as CelulaCartaCustomTableViewCell
+        let card = fetchedResultController.objectAtIndexPath(indexPath) as Card
+        
+        cell.setupCustomCell(card)
         return cell
     }
     
@@ -105,24 +106,5 @@ class ListaDesejoViewControllerTableViewController: UITableViewController, NSFet
     }
 
     
-//    func getFetchedResultController() {
-//        
-//        //Primeiro inicializamos um FetchRequest com dados da tabela Task
-//        let fetchRequest = NSFetchRequest(entityName: "Card")
-//        
-//        // Definimos que o campo usado para ordenação será "nome"
-//        let sortDescriptor = NSSortDescriptor(key: "nome", ascending: true)
-//        fetchRequest.sortDescriptors = [sortDescriptor]
-//        
-//        //Iniciamos a propriedade fetchedResultController com uma instância de NSFetchedResultsController
-//        //com o FetchRequest acima definido e sem opções de cache
-//        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
-//        
-//        //a controller será o delegate do fetch
-//        fetchedResultController.delegate = self
-//        
-//        //Executa o Fetch
-//        fetchedResultController.performFetch(nil)
-//    }
 
 }
