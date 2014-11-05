@@ -477,7 +477,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dice1" width="2400" height="2400"/>
+        <image name="dice1" width="600" height="600"/>
         <image name="info" width="640" height="960"/>
         <image name="moeda1" width="155" height="155"/>
         <image name="mtg_buscar" width="200" height="200"/>
