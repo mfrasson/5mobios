@@ -26,6 +26,9 @@
                                 <state key="normal" image="mtggreen">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="R7F-yB-RAx" kind="showDetail" id="YgA-gE-A5X"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ses-RQ-yfo">
                                 <rect key="frame" x="374" y="228" width="70" height="70"/>
@@ -150,6 +153,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="455" y="119"/>
+        </scene>
+        <!--Lista Desejo View Controller Table View Controller-->
+        <scene sceneID="Ubh-GM-JQh">
+            <objects>
+                <tableViewController id="R7F-yB-RAx" customClass="ListaDesejoViewControllerTableViewController" customModule="mtg_waff" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yvs-RX-7PV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="CellID" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellID" id="RM3-7H-phe" customClass="CelulaCartaCustomTableViewCell" customModule="mtg_waff" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RM3-7H-phe" id="0n2-fd-V1w">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="R7F-yB-RAx" id="q9I-No-GAi"/>
+                            <outlet property="delegate" destination="R7F-yB-RAx" id="sil-qc-B2O"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S7a-i5-c2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429" y="-615"/>
         </scene>
         <!--Moeda View Controller-->
         <scene sceneID="tQg-YU-ire">
