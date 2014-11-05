@@ -35,11 +35,9 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
         
         imagem.image = UIImage(data: dataImagem!)
         
-        let imgBranca = UIImage(named: "mtgwhite")
-        let imgAzul = UIImage(named: "mtgblue")
-        
-        
-        self.desejoButton.setImage((self.desejado) ? imgBranca : imgAzul, forState: UIControlState.Normal)
+        let addFave = UIImage(named: "addFave")
+        let removeFave = UIImage(named: "removeFave")
+        self.desejoButton.setImage((self.desejado) ? addFave : removeFave, forState: UIControlState.Normal)
         
         self.setupCoreDataStack()
         
@@ -55,16 +53,16 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
     
     func setupCoreDataStack(){
         // Criação do Modelo
-        let modelURL:NSURL? = NSBundle.mainBundle().URLForResource("FavListModel", withExtension: "momd")
-        let model = NSManagedObjectModel(contentsOfURL: modelURL!)
+        var modelURL:NSURL? = NSBundle.mainBundle().URLForResource("FavListModel", withExtension: "momd")
+        var model = NSManagedObjectModel(contentsOfURL: modelURL!)
         
         // Criação do Coordenador
         var coordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
         
-        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        let applicationDocumentsDirectory = urls[0] as NSURL
+        var urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        var applicationDocumentsDirectory = urls[0] as NSURL
         
-        let url = applicationDocumentsDirectory.URLByAppendingPathComponent("FavListModel.sqlite")
+        var url = applicationDocumentsDirectory.URLByAppendingPathComponent("FavListModel.sqlite")
         var error: NSError? = nil
         
         var store = coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error)
