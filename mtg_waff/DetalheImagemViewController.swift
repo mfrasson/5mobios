@@ -20,6 +20,8 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
     var managedObjectContext: NSManagedObjectContext?
     var desejado: Bool = false
     
+    var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -100,6 +102,30 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
     
     func delCardFromFavList(carta:Card){
         managedObjectContext?.deleteObject(carta)
+    }
+    
+    func getFetchedResultController(){
+        let fetchRequest = NSFetchRequest(entityName: "Card")
+        
+        let sortDescriptor = NSSortDescriptor(key: "nome", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
+        
+        fetchedResultController.delegate = self
+        
+        fetchedResultController.performFetch(nil)
+    }
+
+    
+    func existeNaListaFav(carta:Card) -> Bool{
+        var resultado = fetchedResultController.fetchedObjects as Array<Card>
+        for card:Card in resultado {
+            if(card.id == carta.id){
+                return true
+            }
+        }
+        return false
     }
     
 }
