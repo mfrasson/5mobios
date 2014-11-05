@@ -73,62 +73,6 @@ class MoedaViewController: UIViewController, UIGestureRecognizerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        // Recupera um toque qualquer na tela
-        let touch:UITouch = touches.anyObject() as UITouch
-        
-        // Verifica se o dedo docima do objeto pelo toque na view geral
-        if (CGRectContainsPoint(self.coinImageView.frame, touch.locationInView(self.view))) {
-            self.touchCoin = true
-        }
-    }
-    
-    override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
-        // Recupera um toque qualquer na tela
-        let touch:UITouch = touches.anyObject() as UITouch
-        
-        // Pega a posicao(x,y) do toque recuperado
-        let location:CGPoint = touch.locationInView(self.view)
-        
-        //self.touchCoin = false
-        
-        // Quando tocado, se mover, a moeda acompanha o movimento
-        //if (self.touchCoin) {
-        //    self.coinImageView.center = CGPointMake(location.x, location.y);
-        //}
-    }
-    
-    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-        let originalPosition:CGPoint = self.coinImageView.center
-
-        if(!self.animando){
-            self.animando = true;
-            UIView.animateWithDuration(1.0, animations: { () -> Void in
-                self.coinImageView.startAnimating()
-                self.coinImageView.center = CGPointMake(self.coinImageView.center.x, self.coinImageView.center.y - 375)
-                }) { (completed) -> Void in
-                    if(completed){
-                        UIView.animateWithDuration(1.0, animations: { () -> Void in
-                            self.coinImageView.center = CGPointMake(self.coinImageView.center.x, self.coinImageView.center.y + 375)
-                            }) { (completed2) -> Void in
-                                self.coinImageView.stopAnimating()
-                                self.animando = false
-                                if (arc4random_uniform(100) > 50) {
-                                    self.coinImageView.image = UIImage(named: "moeda1")
-                                } else {
-                                    self.coinImageView.image = UIImage(named: "moeda3")
-                                }
-                        }
-                    }
-            }}
-        
-    }
-    
-    override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
-        self.touchCoin = false
-    }
-    */
     
     /*
     // MARK: - Navigation
