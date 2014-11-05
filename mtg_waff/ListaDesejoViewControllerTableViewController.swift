@@ -66,16 +66,16 @@ class ListaDesejoViewControllerTableViewController: UITableViewController, NSFet
 
     func setupCoreDataStack(){
         // Criação do Modelo
-        let modelURL:NSURL? = NSBundle.mainBundle().URLForResource("FavListModel", withExtension: "momd")
-        let model = NSManagedObjectModel(contentsOfURL: modelURL!)
+        var modelURL:NSURL? = NSBundle.mainBundle().URLForResource("FavListModel", withExtension: "momd")
+        var model = NSManagedObjectModel(contentsOfURL: modelURL!)
         
         // Criação do Coordenador
         var coordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
         
-        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        let applicationDocumentsDirectory = urls[0] as NSURL
+        var urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        var applicationDocumentsDirectory = urls[0] as NSURL
         
-        let url = applicationDocumentsDirectory.URLByAppendingPathComponent("FavListModel.sqlite")
+        var url = applicationDocumentsDirectory.URLByAppendingPathComponent("FavListModel.sqlite")
         var error: NSError? = nil
         
         var store = coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error)

@@ -27,7 +27,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="R7F-yB-RAx" kind="showDetail" id="YgA-gE-A5X"/>
+                                    <segue destination="R7F-yB-RAx" kind="show" id="YgA-gE-A5X"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ses-RQ-yfo">
@@ -420,12 +420,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="apD-rD-eoU">
                                 <rect key="frame" x="0.0" y="84" width="600" height="486"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foc-8T-RsQ">
-                                <rect key="frame" x="530" y="57" width="41" height="41"/>
-                                <state key="normal" image="mtggreen"/>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="Jhp-Ml-Kaf" firstAttribute="top" secondItem="apD-rD-eoU" secondAttribute="bottom" constant="30" id="298-RZ-aH3"/>
                             <constraint firstAttribute="trailing" secondItem="apD-rD-eoU" secondAttribute="trailing" id="aoB-e2-Qpa"/>
@@ -435,12 +431,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Carta" id="Kcq-Gt-P6N">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="bu6-y4-5uv">
-                            <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ygL-4x-KgI">
+                            <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="ygL-4x-KgI">
                                 <rect key="frame" x="451" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                             </button>
                         </barButtonItem>
                     </navigationItem>
