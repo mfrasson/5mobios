@@ -1,5 +1,5 @@
 //
-//  mtg_waff.swift
+//  Card.swift
 //  mtg_waff
 //
 //  Created by Usuário Convidado on 04/11/14.

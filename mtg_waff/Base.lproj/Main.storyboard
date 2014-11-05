@@ -305,7 +305,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0B-ZK-GCd">
                                 <rect key="frame" x="20" y="199" width="564" height="351"/>
-                                <mutableString key="text">Projeto iOS - MTG WAFF  Integrantes: - Caio Waquil - Mauricio Frasson - Newton Arruda - Ronaldo Faraone  Projeto: App desenvolvido para os fãs de Magic The Gathering.  &gt; Permite você buscar cartas de todas as edições lançadas.  &gt; Pode usar moeda &gt; Pode usar o dado &gt; Adicionar suas cartas a uma lista de favoritos</mutableString>
+                                <string key="text">Projeto iOS - MTG WAFF  Integrantes: - Caio Waquil - Mauricio Frasson - Newton Arruda - Ronaldo Faraone  Projeto: App desenvolvido para os fãs de Magic The Gathering.  &gt; Permite você buscar cartas de todas as edições lançadas.  &gt; Pode usar moeda &gt; Pode usar o dado &gt; Adicionar suas cartas a uma lista de favoritos</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
