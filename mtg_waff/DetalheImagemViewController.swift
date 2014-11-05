@@ -20,6 +20,8 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
     var managedObjectContext: NSManagedObjectContext?
     var desejado: Bool = false
     
+    var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,15 +37,11 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
         
         imagem.image = UIImage(data: dataImagem!)
         
+        self.setupCoreDataStack()
+        
         let addFave = UIImage(named: "addFave")
         let removeFave = UIImage(named: "removeFave")
         self.desejoButton.setImage((self.desejado) ? addFave : removeFave, forState: UIControlState.Normal)
-        
-        self.setupCoreDataStack()
-        
-        
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -78,6 +76,18 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
         
     }
     
+    
+    @IBAction func addCardToFavList(sender: UIButton) {
+        let entityDescripition = NSEntityDescription.entityForName("Card", inManagedObjectContext: managedObjectContext!)
+        let card = Card(entity: entityDescripition!, insertIntoManagedObjectContext: managedObjectContext)
+        card.id = celulaCarta.idCarta
+        card.nome = celulaCarta.nomeCarta.text!
+        card.edicao = celulaCarta.edicaoCarta.text!
+        card.imgpath = enderecoImagem
+        managedObjectContext?.save(nil)
+    }
+    
+    /*
     func addCardToFavList(){
         let entityDescripition = NSEntityDescription.entityForName("Card", inManagedObjectContext: managedObjectContext!)
         let card = Card(entity: entityDescripition!, insertIntoManagedObjectContext: managedObjectContext)
@@ -88,9 +98,34 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
         managedObjectContext?.save(nil)
         
     }
+    */
     
     func delCardFromFavList(carta:Card){
         managedObjectContext?.deleteObject(carta)
+    }
+    
+    func getFetchedResultController(){
+        let fetchRequest = NSFetchRequest(entityName: "Card")
+        
+        let sortDescriptor = NSSortDescriptor(key: "nome", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
+        
+        fetchedResultController.delegate = self
+        
+        fetchedResultController.performFetch(nil)
+    }
+
+    
+    func existeNaListaFav(carta:Card) -> Bool{
+        var resultado = fetchedResultController.fetchedObjects as Array<Card>
+        for card:Card in resultado {
+            if(card.id == carta.id){
+                return true
+            }
+        }
+        return false
     }
     
 }
