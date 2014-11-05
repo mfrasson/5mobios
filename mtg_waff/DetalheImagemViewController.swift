@@ -13,18 +13,18 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
     var arrCarta:Array<Dictionary<String, AnyObject>>? = nil
     
     @IBOutlet var imagem: UIImageView!
+    @IBOutlet weak var desejoButton: UIButton!
     
     var celulaCarta: CelulaCartaCustomTableViewCell!
-
     var enderecoImagem:NSString = ""
-    
     var managedObjectContext: NSManagedObjectContext?
+    var desejado: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.enderecoImagem = "http://api.mtgdb.info/content/hi_res_card_images/" + String(celulaCarta.idCarta) + ".jpg"
-
+        
         let urlImagem:NSURL = NSURL(string: enderecoImagem)
         
         let requestImagem:NSURLRequest = NSURLRequest(URL: urlImagem)
@@ -35,11 +35,19 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
         
         imagem.image = UIImage(data: dataImagem!)
         
+        let imgBranca = UIImage(named: "mtgwhite")
+        let imgAzul = UIImage(named: "mtgblue")
+        
+        
+        self.desejoButton.setImage((self.desejado) ? imgBranca : imgAzul, forState: UIControlState.Normal)
+        
         self.setupCoreDataStack()
         
         
+        
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -49,7 +57,7 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
         // Criação do Modelo
         let modelURL:NSURL? = NSBundle.mainBundle().URLForResource("FavListModel", withExtension: "momd")
         let model = NSManagedObjectModel(contentsOfURL: modelURL!)
-
+        
         // Criação do Coordenador
         var coordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
         
@@ -69,7 +77,7 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
         // Criação do contexto
         managedObjectContext = NSManagedObjectContext()
         managedObjectContext!.persistentStoreCoordinator = coordinator
-       
+        
     }
     
     func addCardToFavList(){
@@ -80,11 +88,11 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
         card.edicao = celulaCarta.edicaoCarta.text!
         card.imgpath = enderecoImagem
         managedObjectContext?.save(nil)
-
+        
     }
     
     func delCardFromFavList(carta:Card){
         managedObjectContext?.deleteObject(carta)
     }
-
+    
 }

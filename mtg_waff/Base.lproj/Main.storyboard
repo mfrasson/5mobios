@@ -276,7 +276,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0B-ZK-GCd">
                                 <rect key="frame" x="20" y="199" width="564" height="351"/>
-                                <mutableString key="text">Projeto iOS - MTG WAFF  Integrantes: - Caio Waquil - Mauricio Frasson - Newton Arruda - Ronaldo Faraone  Projeto: App desenvolvido para os fãs de Magic The Gathering.  &gt; Permite você buscar cartas de todas as edições lançadas.  &gt; Pode usar moeda &gt; Pode usar o dado &gt; Adicionar suas cartas a uma lista de favoritos</mutableString>
+                                <string key="text">Projeto iOS - MTG WAFF  Integrantes: - Caio Waquil - Mauricio Frasson - Newton Arruda - Ronaldo Faraone  Projeto: App desenvolvido para os fãs de Magic The Gathering.  &gt; Permite você buscar cartas de todas as edições lançadas.  &gt; Pode usar moeda &gt; Pode usar o dado &gt; Adicionar suas cartas a uma lista de favoritos</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -362,7 +362,7 @@
                                 <connections>
                                     <outlet property="edicaoCarta" destination="ZDn-NN-Zv6" id="dZU-8A-MJB"/>
                                     <outlet property="nomeCarta" destination="cOQ-7P-TgV" id="0vH-mP-Jg3"/>
-                                    <segue destination="lNU-zW-wRT" kind="presentation" identifier="toImageViewSegue" modalTransitionStyle="crossDissolve" id="2nr-ut-h82"/>
+                                    <segue destination="YWE-zh-5FC" kind="show" identifier="toImageViewSegue" id="ivq-Mw-H4w"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -376,22 +376,53 @@
             </objects>
             <point key="canvasLocation" x="1804" y="117"/>
         </scene>
-        <!--Detalhe Imagem View Controller-->
-        <scene sceneID="3XW-7A-Nyu">
+        <!--Carta-->
+        <scene sceneID="I5r-Mx-e9m">
             <objects>
-                <viewController id="lNU-zW-wRT" customClass="DetalheImagemViewController" customModule="mtg_waff" customModuleProvider="target" sceneMemberID="viewController">
-                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fKf-Mb-PJ5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                <viewController id="YWE-zh-5FC" customClass="DetalheImagemViewController" customModule="mtg_waff" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oXv-iN-hTR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jhp-Ml-Kaf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ICL-yQ-vpe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="apD-rD-eoU">
+                                <rect key="frame" x="0.0" y="84" width="600" height="486"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foc-8T-RsQ">
+                                <rect key="frame" x="530" y="57" width="41" height="41"/>
+                                <state key="normal" image="mtggreen"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jhp-Ml-Kaf" firstAttribute="top" secondItem="apD-rD-eoU" secondAttribute="bottom" constant="30" id="298-RZ-aH3"/>
+                            <constraint firstAttribute="trailing" secondItem="apD-rD-eoU" secondAttribute="trailing" id="aoB-e2-Qpa"/>
+                            <constraint firstItem="apD-rD-eoU" firstAttribute="leading" secondItem="ICL-yQ-vpe" secondAttribute="leading" id="jY0-D7-JsJ"/>
+                            <constraint firstItem="apD-rD-eoU" firstAttribute="top" secondItem="oXv-iN-hTR" secondAttribute="bottom" constant="20" id="kli-Un-uX6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Carta" id="Kcq-Gt-P6N">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="bu6-y4-5uv">
+                            <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ygL-4x-KgI">
+                                <rect key="frame" x="451" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="imagem" destination="fKf-Mb-PJ5" id="7ny-kd-FE2"/>
+                        <outlet property="desejoButton" destination="ygL-4x-KgI" id="SQg-QW-6J0"/>
+                        <outlet property="imagem" destination="apD-rD-eoU" id="scl-3I-S5U"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tTC-iW-Xi4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0pr-gS-8Fz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2479" y="119"/>
+            <point key="canvasLocation" x="2603" y="105"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l0s-FV-H1w">
