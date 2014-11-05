@@ -32,6 +32,22 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
         
         self.cartas = json as? Array<Dictionary<String, AnyObject>>
         
+        if (self.cartas!.count == 0){
+            var actionSheet = UIAlertController (title: "Carta não encontrada", message:"Não foi possível encontrar a carta, favor tentar novamente!", preferredStyle: UIAlertControllerStyle.ActionSheet)
+            
+            actionSheet.addAction(UIAlertAction(
+                title: "OK",
+                style: UIAlertActionStyle.Default,
+                handler: nil))
+            
+            self.presentViewController(actionSheet, animated: true, completion: nil)
+
+            
+            dismissViewControllerAnimated(false, completion: { () -> Void in
+                
+            })
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
