@@ -13,7 +13,7 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
     var cartas:Array<Dictionary<String, AnyObject>>? = nil
     var data = NSMutableData()
     
-    var nomePesquisa:NSString?
+    var nomePesquisa: NSString?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +21,7 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
         trataEspacosNomePesquisa(nomePesquisa!)
         
         let url:NSURL = NSURL(string: "http://api.mtgdb.info/search/" + nomePesquisa! + "?start=0&limit=0")
-        
-        
+
         let request:NSURLRequest = NSURLRequest(URL: url)
         
         // Invoca a requisicao de forma sincrona
@@ -53,22 +52,19 @@ class ListaResultadoViewController: UITableViewController, NSURLConnectionDelega
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("CellID", forIndexPath: indexPath) as CelulaCartaCustomTableViewCell
+        
         let carta:Dictionary<String, AnyObject> = cartas![indexPath.row]
         
         cell.setupCustomCell(carta)
-        
-//        cell.textLabel?.text = carta["name"]! as? String
-//        //        let detail:Int = carta["id"]! as Int
-//        //        cell.detailTextLabel?.text = "\(detail)"
-//        cell.detailTextLabel?.text = carta["cardSetId"]! as? String
         return cell
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-//        if(segue.identifier == "toImageViewSegue"){
-//            let detalheImagemController:DetalheImagemViewController = segue.destinationViewController as DetalheImagemViewController
-//            detalheImagemController.idCarta = (sender as UITableViewCell).t
-//        }
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if(segue.identifier == "toImageViewSegue"){
+            let detalheImagemController:DetalheImagemViewController = segue.destinationViewController as DetalheImagemViewController
+            detalheImagemController.celulaCarta = sender as CelulaCartaCustomTableViewCell
+        }
+    }
 }

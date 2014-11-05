@@ -14,7 +14,8 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
     
     @IBOutlet var imagem: UIImageView!
     
-    var idCarta:NSString = "3"
+    var celulaCarta: CelulaCartaCustomTableViewCell!
+
     var enderecoImagem:NSString = ""
     
     var managedObjectContext: NSManagedObjectContext?
@@ -22,7 +23,7 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.enderecoImagem = "http://api.mtgdb.info/content/hi_res_card_images/" + idCarta + ".jpg"
+        self.enderecoImagem = "http://api.mtgdb.info/content/hi_res_card_images/" + String(celulaCarta.idCarta) + ".jpg"
 
         let urlImagem:NSURL = NSURL(string: enderecoImagem)
         
@@ -31,7 +32,6 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
         var errorImagem = NSErrorPointer()
         var responseImagem = AutoreleasingUnsafeMutablePointer<NSURLResponse?>()
         var dataImagem:NSData? = NSURLConnection.sendSynchronousRequest(requestImagem, returningResponse: responseImagem, error: errorImagem)
-
         
         imagem.image = UIImage(data: dataImagem!)
         
@@ -75,9 +75,9 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
     func addCardToFavList(){
         let entityDescripition = NSEntityDescription.entityForName("Card", inManagedObjectContext: managedObjectContext!)
         let card = Card(entity: entityDescripition!, insertIntoManagedObjectContext: managedObjectContext)
-//        card.id = idCarta
-//        card.nome = nomeCarta
-//        card.edicao = edicaoCarta
+        card.id = celulaCarta.idCarta
+        card.nome = celulaCarta.nomeCarta.text!
+        card.edicao = celulaCarta.edicaoCarta.text!
         card.imgpath = enderecoImagem
         managedObjectContext?.save(nil)
 
@@ -86,16 +86,5 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
     func delCardFromFavList(carta:Card){
         managedObjectContext?.deleteObject(carta)
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

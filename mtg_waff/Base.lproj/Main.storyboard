@@ -299,7 +299,6 @@
         <!--Dado View Controller-->
         <scene sceneID="YWX-Bt-CAP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MVf-f8-oRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="DWU-LE-dMx" customClass="DadoViewController" customModule="mtg_waff" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gbb-O4-K9W"/>
@@ -327,6 +326,7 @@
                         <outlet property="diceImageView" destination="c7O-rh-ycg" id="qdm-Hi-xtW"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MVf-f8-oRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1133" y="862"/>
         </scene>
@@ -360,7 +360,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="colecaoCarta" destination="ZDn-NN-Zv6" id="Dmm-z8-GB8"/>
+                                    <outlet property="edicaoCarta" destination="ZDn-NN-Zv6" id="dZU-8A-MJB"/>
                                     <outlet property="nomeCarta" destination="cOQ-7P-TgV" id="0vH-mP-Jg3"/>
                                     <segue destination="lNU-zW-wRT" kind="presentation" identifier="toImageViewSegue" modalTransitionStyle="crossDissolve" id="2nr-ut-h82"/>
                                 </connections>
