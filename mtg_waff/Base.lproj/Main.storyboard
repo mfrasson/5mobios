@@ -480,7 +480,7 @@
         <image name="dice1" width="2400" height="2400"/>
         <image name="info" width="640" height="960"/>
         <image name="moeda1" width="155" height="155"/>
-        <image name="mtg_buscar" width="256" height="256"/>
+        <image name="mtg_buscar" width="200" height="200"/>
         <image name="mtgblack" width="128" height="128"/>
         <image name="mtgblue" width="128" height="128"/>
         <image name="mtggreen" width="128" height="128"/>
