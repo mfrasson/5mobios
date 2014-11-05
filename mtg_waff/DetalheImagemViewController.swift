@@ -35,15 +35,11 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
         
         imagem.image = UIImage(data: dataImagem!)
         
+        self.setupCoreDataStack()
+        
         let addFave = UIImage(named: "addFave")
         let removeFave = UIImage(named: "removeFave")
         self.desejoButton.setImage((self.desejado) ? addFave : removeFave, forState: UIControlState.Normal)
-        
-        self.setupCoreDataStack()
-        
-        
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -78,6 +74,18 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
         
     }
     
+    
+    @IBAction func addCardToFavList(sender: UIButton) {
+        let entityDescripition = NSEntityDescription.entityForName("Card", inManagedObjectContext: managedObjectContext!)
+        let card = Card(entity: entityDescripition!, insertIntoManagedObjectContext: managedObjectContext)
+        card.id = celulaCarta.idCarta
+        card.nome = celulaCarta.nomeCarta.text!
+        card.edicao = celulaCarta.edicaoCarta.text!
+        card.imgpath = enderecoImagem
+        managedObjectContext?.save(nil)
+    }
+    
+    /*
     func addCardToFavList(){
         let entityDescripition = NSEntityDescription.entityForName("Card", inManagedObjectContext: managedObjectContext!)
         let card = Card(entity: entityDescripition!, insertIntoManagedObjectContext: managedObjectContext)
@@ -88,6 +96,7 @@ class DetalheImagemViewController: UIViewController, NSURLConnectionDelegate, NS
         managedObjectContext?.save(nil)
         
     }
+    */
     
     func delCardFromFavList(carta:Card){
         managedObjectContext?.deleteObject(carta)
